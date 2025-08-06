@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focagem LDA - Transforme sua Gestão com Cegid ERP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'focagem-blue': '#004D99',
+                        'focagem-yellow': '#FFB100',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm py-4 px-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-focagem-blue">Focagem</div>
+            <button onclick="scrollToForm()" class="bg-focagem-yellow hover:bg-yellow-500 text-focagem-blue font-semibold px-6 py-2 rounded-lg transition-all">
+                Avaliação Gratuita
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section - Above the fold -->
+    <section class="bg-gradient-to-br from-focagem-blue to-blue-800 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <!-- Headline Principal -->
+                <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+                    Transforme a sua gestão com o poder do 
+                    <span class="text-focagem-yellow">Cegid ERP</span>
+                </h1>
+                
+                <!-- Sub-headline -->
+                <p class="text-xl lg:text-2xl text-blue-100 leading-relaxed">
+                    Elimine processos manuais, integre todos os departamentos e tenha controlo total do seu negócio numa única plataforma.
+                </p>
+                
+                <!-- Proposta de Valor Única -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <p class="text-lg font-medium text-focagem-yellow mb-2">✅ Avaliação Gratuita da Sua Operação</p>
+                    <p class="text-blue-100">Descubra como pode poupar até 40% do tempo em processos administrativos</p>
+                </div>
+                
+                <!-- CTA Principal -->
+                <button onclick="scrollToForm()" class="bg-focagem-yellow hover:bg-yellow-500 text-focagem-blue font-bold px-10 py-5 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Quero Minha Avaliação Gratuita →
+                </button>
+                
+                <!-- Prova Social -->
+                <div class="flex items-center space-x-4 text-sm text-blue-200">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <span>Mais de 200 empresas confiam na Focagem</span>
+                </div>
+            </div>
+            
+            <!-- Visual/Imagem -->
+            <div class="flex justify-center">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                    <svg class="w-80 h-64 text-focagem-yellow" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Identificação do Problema -->
+    <section class="py-16 px-4 bg-red-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-red-700 mb-8">
+                Está a perder dinheiro todos os dias?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <div class="text-4xl mb-4">⏰</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Processos Manuais</h3>
+                    <p class="text-gray-600">Horas perdidas em tarefas repetitivas que poderiam ser automatizadas</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <div class="text-4xl mb-4">❌</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Erros Humanos</h3>
+                    <p class="text-gray-600">Falhas custosas por falta de integração entre sistemas</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Falta de Visibilidade</h3>
+                    <p class="text-gray-600">Decisões baseadas em dados desatualizados ou incompletos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apresentação da Solução -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-focagem-blue mb-4">
+                    A Solução: Cegid ERP com Consultoria Focagem
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Sistema completo de gestão empresarial com implementação e suporte especializado
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Automatização Completa</h3>
+                            <p class="text-gray-600">Elimine tarefas manuais e reduza erros em até 95%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Integração Total</h3>
+                            <p class="text-gray-600">Contabilidade, faturação e gestão numa só plataforma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 17l3-3-3-3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Relatórios em Tempo Real</h3>
+                            <p class="text-gray-600">Dashboards intuitivos para decisões mais rápidas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-focagem-blue mb-6">Resultados Comprovados</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Redução de tempo em processos</span>
+                            <span class="text-2xl font-bold text-green-600">40%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Diminuição de erros</span>
+                            <span class="text-2xl font-bold text-green-600">95%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Aumento de produtividade</span>
+                            <span class="text-2xl font-bold text-green-600">60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios/Características -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center text-focagem-blue mb-12">
+                Porquê Escolher a Focagem?
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-focagem-yellow rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-4">Certificação Oficial</h3>
+                    <p class="text-gray-600">Parceiros certificados Cegid com mais de 10 anos de experiência</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-focagem-yellow rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-4">Suporte 24/7</h3>
+                    <p class="text-gray-600">Apoio técnico especializado sempre que precisar</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-focagem-yellow rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-4">Segurança Máxima</h3>
+                    <p class="text-gray-600">Dados protegidos na cloud com backup automático</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social/Testemunhos -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-focagem-blue mb-12">
+                O que dizem os nossos clientes
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-focagem-yellow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Reduziu o nosso tempo de faturação em 70%. Excelente suporte!"</p>
+                    <div class="font-semibold text-focagem-blue">João Silva - CEO, TechLda</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-focagem-yellow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Implementação rápida e sem complicações. Recomendo!"</p>
+                    <div class="font-semibold text-focagem-blue">Maria Santos - CFO, InnovaGroup</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-focagem-yellow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Finalmente temos controlo total sobre a nossa operação."</p>
+                    <div class="font-semibold text-focagem-blue">Carlos Mendes - Diretor, LogiCorp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Conversão -->
+    <section id="contact-form" class="py-20 px-4 bg-gradient-to-r from-focagem-blue to-blue-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-12">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-4">
+                    Pronto para Transformar o Seu Negócio?
+                </h2>
+                <p class="text-xl text-blue-200 mb-6">
+                    Agende agora a sua avaliação gratuita e descubra como pode economizar tempo e dinheiro
+                </p>
+                <div class="bg-focagem-yellow text-focagem-blue px-6 py-3 rounded-full inline-block font-semibold">
+                    🎁 Avaliação 100% Gratuita - Sem Compromisso
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-focagem-blue mb-2">Nome Completo *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-focagem-blue focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-focagem-blue mb-2">Email Profissional *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-focagem-blue focus:border-transparent transition-all">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-focagem-blue mb-2">Empresa *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-focagem-blue focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-focagem-blue mb-2">Telefone *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-focagem-blue focus:border-transparent transition-all">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-focagem-blue mb-2">Número de Funcionários</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-focagem-blue focus:border-transparent transition-all">
+                            <option>1-10 funcionários</option>
+                            <option>11-50 funcionários</option>
+                            <option>51-200 funcionários</option>
+                            <option>Mais de 200 funcionários</option>
+                        </select>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-focagem-yellow hover:bg-yellow-500 text-focagem-blue font-bold px-12 py-5 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            🚀 Quero Minha Avaliação Gratuita Agora!
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">
+                            ✅ Sem spam ✅ Dados protegidos ✅ Resposta em 24h
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section class="py-12 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-sm text-gray-600 mb-8">Parceiros Oficiais</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                    <span class="text-focagem-blue font-bold">Cegid</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                    <span class="text-focagem-blue font-bold">Eticadata</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                    <span class="text-focagem-blue font-bold">Filedoc</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                    <span class="text-focagem-blue font-bold">Defir</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                    <span class="text-focagem-blue font-bold text-sm">Microsoft</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                    <span class="text-focagem-blue font-bold">DigitalSign</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-focagem-blue text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-focagem-yellow">Focagem LDA</h4>
+                    <p class="text-blue-200">Especialistas em consultoria técnica ERP e transformação digital.</p>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Contactos</h5>
+                    <div class="space-y-2 text-blue-200">
+                        <p>📧 suporte@focagem.com</p>
+                        <p>📞 +351 21 393 00 83</p>
+                        <p>🌐 www.focagem.com</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Serviços</h5>
+                    <ul class="space-y-2 text-blue-200">
+                        <li>Consultoria ERP Cegid</li>
+                        <li>Implementação</li>
+                        <li>Formação</li>
+                        <li>Suporte Técnico</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Localização</h5>
+                    <p class="text-blue-200">
+                        Rua General Ferreira Martins, nº 8A, 1-B<br>
+                        1495-137 Algés, Portugal
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-700 mt-8 pt-8 text-center">
+                <p class="text-focagem-yellow text-lg">🌟 Parceiros de confiança em gestão e tecnologia</p>
+                <p class="text-blue-200 mt-2">© 2024 Focagem LDA. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToForm() {
+            document.getElementById('contact-form').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Obrigado pelo seu interesse! A nossa equipa entrará em contacto consigo nas próximas 24 horas para agendar a sua avaliação gratuita.');
+            event.target.reset();
+        }
+
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96af9c0c3250692a',t:'MTc1NDQ5NDU4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
