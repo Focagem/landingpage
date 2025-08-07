@@ -402,15 +402,27 @@
 
         function handleSubmit(event) {
             event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
         
-            emailjs.sendForm('service_p9te2iv', 'template_qocn0nb','#contact-form', event.target)
-                .then(function(response) {
-                    alert('Obrigado pelo seu interesse! A nossa equipa entrará em contacto consigo nas próximas 24 horas.');
-                    event.target.reset();
-                }, function(error) {
-                    console.error('Erro ao enviar:', error);
-                    alert('Ocorreu um erro ao enviar o email. Por favor tente novamente.');
-                });
+            // Construir o objeto com os valores do formulário
+            const templateParams = {
+              name: formData.get("name"),
+              email: formData.get("email"),
+              company: formData.get("company"),
+              phone: formData.get("phone")
+            };
+        
+            // Enviar o email via EmailJS
+            emailjs.send('service_p9te2iv', 'template_qocn0nb', templateParams)
+              .then(function(response) {
+                alert("Obrigado pelo seu interesse! A nossa equipa entrará em contacto consigo nas próximas 24 horas.");
+                form.reset(); // Limpa o formulário
+              }, function(error) {
+                console.error("Erro ao enviar:", error);
+                alert("Ocorreu um erro ao enviar o email. Por favor tente novamente.");
+              });
+            
         }
 
         // Scroll animations
@@ -439,6 +451,7 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96af9c0c3250692a',t:'MTc1NDQ5NDU4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
 
