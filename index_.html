@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focagem - Consultoria e Soluções de Gestão Empresarial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'focagem-blue': '#003d82',
+                        'focagem-light-blue': '#1e5aa8',
+                        'focagem-yellow': '#ffd700',
+                        'focagem-dark-yellow': '#e6c200',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-lg py-4 px-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-focagem-blue rounded-lg flex items-center justify-center">
+                    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <span class="text-2xl font-bold text-focagem-blue">Focagem</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#servicos" class="text-gray-700 hover:text-focagem-blue transition-colors">Serviços</a>
+                <a href="#solucoes" class="text-gray-700 hover:text-focagem-blue transition-colors">Soluções</a>
+                <a href="#sobre" class="text-gray-700 hover:text-focagem-blue transition-colors">Sobre</a>
+            </nav>
+            <button onclick="scrollToForm()" class="bg-focagem-yellow hover:bg-focagem-dark-yellow text-focagem-blue font-semibold px-6 py-2 rounded-lg transition-all">
+                Contactar
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-focagem-blue via-blue-700 to-focagem-light-blue text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-4xl lg:text-6xl font-bold leading-tight">
+                    Transformação Digital para 
+                    <span class="text-focagem-yellow">PMEs</span>
+                </h1>
+                
+                <p class="text-xl lg:text-2xl text-blue-100 leading-relaxed">
+                    Há mais de 20 anos a ajudar empresas a crescer com soluções de gestão integradas, consultoria especializada e suporte técnico de excelência.
+                </p>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <h3 class="text-lg font-semibold text-focagem-yellow mb-3">✨ O que oferecemos:</h3>
+                    <ul class="text-blue-100 space-y-2">
+                        <li>• Consultoria e implementação de sistemas ERP</li>
+                        <li>• Formação especializada para equipas</li>
+                        <li>• Suporte técnico contínuo</li>
+                        <li>• Soluções personalizadas para PMEs</li>
+                    </ul>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="scrollToForm()" class="bg-focagem-yellow hover:bg-focagem-dark-yellow text-focagem-blue font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+                        Fale Connosco
+                    </button>
+                    <button onclick="scrollToServices()" class="border-2 border-white text-white hover:bg-white hover:text-focagem-blue font-semibold px-8 py-4 rounded-lg text-lg transition-all">
+                        Conhecer Serviços
+                    </button>
+                </div>
+                
+                <div class="flex items-center space-x-6 text-sm text-blue-200">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-focagem-yellow">✓</span>
+                        <span>+20 anos experiência</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-focagem-yellow">✓</span>
+                        <span>Parceiro certificado</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+                    <svg class="w-96 h-72 text-focagem-yellow" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-focagem-blue mb-6">
+                    Os Nossos Serviços
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Oferecemos um conjunto completo de serviços para apoiar a transformação digital da sua empresa
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Consultoria -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-focagem-blue rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-focagem-blue mb-4">Consultoria</h3>
+                    <p class="text-gray-600 mb-6">Análise detalhada dos processos empresariais e recomendações estratégicas para otimização.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Auditoria de processos</li>
+                        <li>• Análise de necessidades</li>
+                        <li>• Planeamento estratégico</li>
+                        <li>• Otimização de workflows</li>
+                    </ul>
+                </div>
+
+                <!-- Implementação -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-focagem-yellow rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-focagem-blue mb-4">Implementação</h3>
+                    <p class="text-gray-600 mb-6">Instalação e configuração completa de sistemas de gestão adaptados às suas necessidades.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Instalação de software</li>
+                        <li>• Configuração personalizada</li>
+                        <li>• Migração de dados</li>
+                        <li>• Testes e validação</li>
+                    </ul>
+                </div>
+
+                <!-- Formação -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-focagem-blue mb-4">Formação</h3>
+                    <p class="text-gray-600 mb-6">Capacitação completa das equipas para maximizar o aproveitamento das soluções implementadas.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Formação presencial</li>
+                        <li>• Sessões online</li>
+                        <li>• Manuais personalizados</li>
+                        <li>• Certificação de utilizadores</li>
+                    </ul>
+                </div>
+
+                <!-- Suporte -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-focagem-blue mb-4">Suporte</h3>
+                    <p class="text-gray-600 mb-6">Apoio técnico contínuo para garantir o funcionamento otimizado dos seus sistemas.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Suporte técnico remoto</li>
+                        <li>• Manutenção preventiva</li>
+                        <li>• Atualizações de software</li>
+                        <li>• Helpdesk especializado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluções Section -->
+    <section id="solucoes" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-focagem-blue mb-6">
+                    Parceiros Oficiais
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Certificados pelas principais marcas de software de gestão empresarial
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cegid -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200 hover:border-focagem-blue transition-all">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-focagem-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-lg">C</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-focagem-blue mb-4">Cegid</h3>
+                        <p class="text-gray-600 mb-4">Soluções ERP completas para gestão empresarial integrada.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Contabilidade</li>
+                            <li>• Faturação</li>
+                            <li>• Recursos Humanos</li>
+                            <li>• Business Intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Eticadata -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border-2 border-yellow-200 hover:border-focagem-yellow transition-all">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-focagem-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-focagem-blue font-bold text-lg">E</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-focagem-blue mb-4">Eticadata</h3>
+                        <p class="text-gray-600 mb-4">Software de contabilidade e gestão fiscal especializado.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Contabilidade geral</li>
+                            <li>• Gestão fiscal</li>
+                            <li>• Relatórios legais</li>
+                            <li>• Integração bancária</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Filedoc -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200 hover:border-focagem-blue transition-all">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-focagem-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-lg">F</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-focagem-blue mb-4">Filedoc</h3>
+                        <p class="text-gray-600 mb-4">Gestão documental e arquivo digital inteligente.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Arquivo digital</li>
+                            <li>• Gestão documental</li>
+                            <li>• Workflow automático</li>
+                            <li>• Pesquisa avançada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Defir -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border-2 border-yellow-200 hover:border-focagem-yellow transition-all">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-focagem-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-focagem-blue font-bold text-lg">D</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-focagem-blue mb-4">Defir</h3>
+                        <p class="text-gray-600 mb-4">Plataforma de comunicação com a Autoridade Tributária.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Comunicação AT</li>
+                            <li>• Submissão automática</li>
+                            <li>• Validação de dados</li>
+                            <li>• Relatórios fiscais</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Microsoft -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200 hover:border-focagem-blue transition-all">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-focagem-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-white font-bold text-lg">M</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-focagem-blue mb-4">Microsoft</h3>
+                        <p class="text-gray-600 mb-4">Soluções de produtividade e colaboração empresarial.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Office 365</li>
+                            <li>• Teams</li>
+                            <li>• SharePoint</li>
+                            <li>• Power Platform</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DigitalSign -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border-2 border-yellow-200 hover:border-focagem-yellow transition-all">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-focagem-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-focagem-blue font-bold text-lg">DS</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-focagem-blue mb-4">DigitalSign</h3>
+                        <p class="text-gray-600 mb-4">Assinatura digital e certificação eletrónica.</p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Assinatura digital</li>
+                            <li>• Certificados digitais</li>
+                            <li>• Timestamping</li>
+                            <li>• Validação de documentos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Sucesso por Setor -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-focagem-blue mb-6">
+                    Setores que Apoiamos
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Experiência comprovada em diversos setores da economia
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-4">🏭</div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-2">Indústria</h3>
+                    <p class="text-gray-600">Gestão de produção, stocks e qualidade para empresas industriais.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-4">🏪</div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-2">Comércio</h3>
+                    <p class="text-gray-600">Soluções de POS, gestão de inventário e fidelização de clientes.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-4">🏥</div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-2">Serviços</h3>
+                    <p class="text-gray-600">Gestão de projetos, faturação e recursos humanos para empresas de serviços.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-2">Construção</h3>
+                    <p class="text-gray-600">Controlo de obras, gestão de materiais e certificação energética.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-4">🚚</div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-2">Logística</h3>
+                    <p class="text-gray-600">Gestão de frotas, rastreabilidade e otimização de rotas.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-semibold text-focagem-blue mb-2">Consultoria</h3>
+                    <p class="text-gray-600">Ferramentas para gestão de clientes, projetos e conhecimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section class="py-20 px-4 bg-gradient-to-br from-blue-50 to-blue-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-focagem-blue mb-6">
+                    O Que Dizem os Nossos Clientes
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Resultados reais de empresas que transformaram o seu negócio connosco
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testemunho 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-focagem-blue">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-focagem-blue rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            MC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-focagem-blue text-lg">Maria Costa</h4>
+                            <p class="text-gray-600">CEO, TechSolutions Lda</p>
+                        </div>
+                    </div>
+                    <div class="text-focagem-yellow text-3xl mb-4">"</div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Com a implementação do sistema Cegid pela Focagem, reduzimos 60% do tempo gasto em processos administrativos. O ROI foi de 300% no primeiro ano!"
+                    </p>
+                    <div class="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-semibold">
+                        💰 Poupança: €45.000/ano
+                    </div>
+                </div>
+
+                <!-- Testemunho 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-focagem-yellow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-focagem-yellow rounded-full flex items-center justify-center text-focagem-blue font-bold text-xl mr-4">
+                            JS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-focagem-blue text-lg">João Silva</h4>
+                            <p class="text-gray-600">Diretor, Construções Silva</p>
+                        </div>
+                    </div>
+                    <div class="text-focagem-yellow text-3xl mb-4">"</div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "A consultoria da Focagem revolucionou a nossa gestão de obras. Aumentámos a produtividade em 40% e eliminamos completamente os erros de faturação."
+                    </p>
+                    <div class="bg-blue-100 text-focagem-blue px-4 py-2 rounded-lg text-sm font-semibold">
+                        📈 Crescimento: +40% produtividade
+                    </div>
+                </div>
+
+                <!-- Testemunho 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-green-600">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            AP
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-focagem-blue text-lg">Ana Pereira</h4>
+                            <p class="text-gray-600">CFO, Comercial Norte</p>
+                        </div>
+                    </div>
+                    <div class="text-focagem-yellow text-3xl mb-4">"</div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "O suporte da Focagem é excecional. Sempre disponíveis, sempre com soluções. A nossa contabilidade nunca esteve tão organizada e eficiente."
+                    </p>
+                    <div class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold">
+                        ⭐ Satisfação: 100%
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action dos Testemunhos -->
+            <div class="text-center mt-12">
+                <div class="bg-focagem-blue text-white p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-4">Quer Ser o Próximo Caso de Sucesso?</h3>
+                    <p class="text-blue-200 mb-6">Junte-se a mais de 200 empresas que já transformaram o seu negócio</p>
+                    <button onclick="scrollToForm()" class="bg-focagem-yellow hover:bg-focagem-dark-yellow text-focagem-blue font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+                        Quero Transformar o Meu Negócio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Focagem -->
+    <section id="sobre" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-focagem-blue mb-6">
+                        Mais de 20 Anos de Experiência
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        A Focagem é uma empresa especializada em consultoria e implementação de soluções de gestão empresarial, com foco particular nas necessidades das PMEs portuguesas.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-focagem-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-focagem-blue" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-focagem-blue">Parceiro Certificado</h3>
+                                <p class="text-gray-600">Certificações oficiais das principais marcas de software empresarial.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-focagem-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-focagem-blue" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-focagem-blue">Equipa Especializada</h3>
+                                <p class="text-gray-600">Consultores com vasta experiência em transformação digital.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-focagem-yellow rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-focagem-blue" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-focagem-blue">Suporte Contínuo</h3>
+                            <p class="text-gray-600">Acompanhamento permanente para garantir o sucesso dos projetos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-focagem-blue to-focagem-light-blue rounded-3xl p-8 shadow-2xl">
+                <div class="grid md:grid-cols-4 gap-8 text-center text-white">
+                    <div>
+                        <div class="text-4xl font-bold text-focagem-yellow mb-2">20+</div>
+                        <div class="text-blue-100">Anos de Experiência</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-focagem-yellow mb-2">500+</div>
+                        <div class="text-blue-100">Projetos Realizados</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-focagem-yellow mb-2">200+</div>
+                        <div class="text-blue-100">Clientes Ativos</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-focagem-yellow mb-2">24/7</div>
+                        <div class="text-blue-100">Suporte Técnico</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Conversão Final -->
+    <section id="contact-form" class="py-20 px-4 bg-gradient-to-r from-focagem-blue to-blue-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-12">
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6">
+                    ÚLTIMAS 3 VAGAS DISPONÍVEIS!
+                </h2>
+                <p class="text-2xl text-focagem-yellow mb-6 font-bold animate-pulse">
+                    🔥 CONSULTA GRATUITA - VALOR €500 - HOJE GRÁTIS!
+                </p>
+                <p class="text-xl text-blue-200 mb-8">
+                    Preencha o formulário e receba em 24h um diagnóstico completo da sua empresa
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-focagem-blue mb-4">
+                        RESERVE A SUA CONSULTA GRATUITA
+                    </h3>
+                    <div class="bg-green-100 text-green-700 px-6 py-3 rounded-lg inline-block font-semibold">
+                        ✅ 100% Gratuita ✅ Sem Compromisso ✅ Resultados Garantidos
+                    </div>
+                </div>
+                
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-lg font-bold text-focagem-blue mb-3">Nome Completo *</label>
+                            <input type="text" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-focagem-yellow focus:border-focagem-yellow transition-all text-lg">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-bold text-focagem-blue mb-3">Email Profissional *</label>
+                            <input type="email" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-focagem-yellow focus:border-focagem-yellow transition-all text-lg">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-lg font-bold text-focagem-blue mb-3">Empresa *</label>
+                            <input type="text" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-focagem-yellow focus:border-focagem-yellow transition-all text-lg">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-bold text-focagem-blue mb-3">Telefone *</label>
+                            <input type="tel" required class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-focagem-yellow focus:border-focagem-yellow transition-all text-lg">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-lg font-bold text-focagem-blue mb-3">Número de Funcionários</label>
+                        <select class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-focagem-yellow focus:border-focagem-yellow transition-all text-lg">
+                            <option>1-10 funcionários</option>
+                            <option>11-50 funcionários</option>
+                            <option>51-200 funcionários</option>
+                            <option>Mais de 200 funcionários</option>
+                        </select>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-focagem-yellow hover:bg-focagem-dark-yellow text-focagem-blue font-bold px-16 py-6 rounded-xl text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl pulse-animation">
+                            🚀 QUERO MINHA CONSULTA GRATUITA AGORA!
+                        </button>
+                        <p class="text-sm text-gray-500 mt-6">
+                            ⏰ Resposta garantida em 24 horas | 🔒 Dados 100% seguros | 📞 Ligamos-lhe gratuitamente
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Contador de Urgência -->
+            <div class="text-center mt-8">
+                <div class="bg-red-600 text-white px-8 py-4 rounded-xl inline-block">
+                    <p class="text-xl font-bold">⏰ OFERTA LIMITADA - TERMINA EM:</p>
+                    <div class="text-3xl font-bold mt-2" id="countdown">23:59:45</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-focagem-blue text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-focagem-yellow rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-focagem-blue" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold">Focagem</span>
+                    </div>
+                    <p class="text-blue-200 mb-4">
+                        Especialistas em consultoria e soluções de gestão empresarial há mais de 20 anos.
+                    </p>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4 text-focagem-yellow">Contactos</h5>
+                    <div class="space-y-3 text-blue-200">
+                        <p>📧 suporte@focagem.com</p>
+                        <p>📞 +351 21 393 00 83</p>
+                        <p>🌐 www.focagem.pt</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4 text-focagem-yellow">Serviços</h5>
+                    <ul class="space-y-2 text-blue-200">
+                        <li>Consultoria Empresarial</li>
+                        <li>Implementação ERP</li>
+                        <li>Formação Especializada</li>
+                        <li>Suporte Técnico</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4 text-focagem-yellow">Localização</h5>
+                    <p class="text-blue-200">
+                        Rua General Ferreira Martins, nº 8A, 1-B<br>
+                        1495-137 Algés, Portugal
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-blue-200 mb-4 md:mb-0">
+                        © 2024 Focagem LDA. Todos os direitos reservados.
+                    </p>
+                    <div class="flex space-x-6 text-sm text-blue-200">
+                        <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+                        <a href="#" class="hover:text-white transition-colors">Termos de Serviço</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+
+    <script>
+        function scrollToForm() {
+            document.getElementById('contact-form').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scrollToServices() {
+            document.getElementById('servicos').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('🎉 PARABÉNS! A sua consulta gratuita foi agendada! A nossa equipa entrará em contacto consigo nas próximas 24 horas para confirmar os detalhes. Prepare-se para transformar o seu negócio!');
+            event.target.reset();
+        }
+
+        // Contador regressivo
+        function startCountdown() {
+            let hours = 23;
+            let minutes = 59;
+            let seconds = 45;
+            
+            const countdownElement = document.getElementById('countdown');
+            
+            setInterval(() => {
+                seconds--;
+                
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                
+                if (hours < 0) {
+                    hours = 23;
+                    minutes = 59;
+                    seconds = 45;
+                }
+                
+                const formattedTime = 
+                    String(hours).padStart(2, '0') + ':' +
+                    String(minutes).padStart(2, '0') + ':' +
+                    String(seconds).padStart(2, '0');
+                
+                if (countdownElement) {
+                    countdownElement.textContent = formattedTime;
+                }
+            }, 1000);
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar contador
+            startCountdown();
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b67c07f179edf4',t:'MTc1NDU2NjY3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
